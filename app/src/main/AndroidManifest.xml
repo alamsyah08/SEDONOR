@@ -13,6 +13,33 @@
         android:theme="@style/Theme.SEDONOR"
         tools:targetApi="31">
         <activity
+            android:name=".HomePage"
+            android:exported="false" />
+        <activity
+            android:name=".LengkapiData8"
+            android:exported="false" />
+        <activity
+            android:name=".LengkapiData7"
+            android:exported="false" />
+        <activity
+            android:name=".LengkapiData6"
+            android:exported="false" />
+        <activity
+            android:name=".LengkapiData5"
+            android:exported="false" />
+        <activity
+            android:name=".LengkapiData3"
+            android:exported="false" />
+        <activity
+            android:name=".LengkapiData2"
+            android:exported="false" />
+        <activity
+            android:name=".LengkapiData1"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

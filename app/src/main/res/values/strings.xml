@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">SEDONOR</string>
+    <string-array name="gender">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+        <item>Non Biner</item>
+    </string-array>
+
+    <string-array name="goldar">
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
 </resources>
