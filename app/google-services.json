@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "348443509749",
+    "project_id": "sedonor-2023",
+    "storage_bucket": "sedonor-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348443509749:android:2ff3cb0b45ec0c79c296bc",
+        "android_client_info": {
+          "package_name": "com.example.sedonor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv7XjR-x5Kr3zftm4t4Q-flUhRXFYYowo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

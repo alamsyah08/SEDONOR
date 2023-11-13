@@ -12,7 +12,7 @@ class LengkapiData8 : AppCompatActivity() {
     }
 
     fun keLD9(view : View){
-        val intentKeLD9 = Intent(this, LengkapiData7::class.java)
+        val intentKeLD9 = Intent(this, LengkapiData9::class.java)
         startActivity(intentKeLD9)
     }
     fun back(view : View){

@@ -8,29 +8,22 @@
     android:paddingRight="24dp"
     tools:context=".LengkapiData3">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputNama"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginBottom="100dp"
-        app:boxBackgroundColor="#ffff"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Masukkan tanggal"
-            android:inputType="datetime"
-            android:textColor="#000000"
-            android:textColorHint="#757373" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/goldar"
+        style="?android:spinnerStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="452dp"
+        android:background="@drawable/border_dropdown"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2020"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnBack"
@@ -50,11 +43,11 @@
         android:id="@+id/textNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="24dp"
         android:text="Saya lahir pada..."
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/inputNama"
+        app:layout_constraintBottom_toTopOf="@+id/goldar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -84,7 +77,7 @@
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputNama" />
+        app:layout_constraintTop_toBottomOf="@+id/goldar" />
 
     <ImageView
         android:id="@+id/progressBarr"

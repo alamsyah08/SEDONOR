@@ -6,32 +6,32 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 
-class LengkapiData6 : AppCompatActivity() {
+class LengkapiData9 : AppCompatActivity() {
     private lateinit var sessionManager: SessionManager
     private lateinit var dbFirebase: dbFirebase
     lateinit var retrievedUserId : String
-    lateinit var tinggiBadan : EditText
+    lateinit var kodeDonor : EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lengkapi_data6)
+        setContentView(R.layout.activity_lengkapi_data9)
 
-        tinggiBadan = findViewById<EditText>(R.id.tinggiBadan)
+        kodeDonor = findViewById<EditText>(R.id.kodeDonor)
 
         dbFirebase = dbFirebase(this)
         sessionManager = SessionManager(this)
         retrievedUserId = sessionManager.getUserId().toString()
     }
 
-    fun keLD7(view : View){
-        var vTinggiBadan: Int = Integer.parseInt(tinggiBadan.getText().toString())
-        if(tinggiBadan.getText().isNotEmpty()){
-            dbFirebase.updateData(retrievedUserId, "tinggiBadan", vTinggiBadan, LengkapiData7::class.java)
+    fun keHome(view : View){
+        var vKodeDonor: Int = Integer.parseInt(kodeDonor.getText().toString())
+        if(kodeDonor.getText().isNotEmpty()){
+            dbFirebase.updateData(retrievedUserId, "kodeDonor", vKodeDonor, HomePage::class.java)
         }else{
-            tinggiBadan.requestFocus()
+            kodeDonor.requestFocus()
         }
     }
     fun back(view : View){
-        val intentKeLD5 = Intent(this, LengkapiData5::class.java)
-        startActivity(intentKeLD5)
+        val intentKeLD8 = Intent(this, LengkapiData8::class.java)
+        startActivity(intentKeLD8)
     }
 }
