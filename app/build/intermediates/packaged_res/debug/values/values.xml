@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+        <item>Non Biner</item>
+    </string-array>
+    <string-array name="goldar">
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">SEDONOR</string>
+    <string name="gcm_defaultSenderId" translatable="false">348443509749</string>
+    <string name="google_api_key" translatable="false">AIzaSyDv7XjR-x5Kr3zftm4t4Q-flUhRXFYYowo</string>
+    <string name="google_app_id" translatable="false">1:348443509749:android:2ff3cb0b45ec0c79c296bc</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDv7XjR-x5Kr3zftm4t4Q-flUhRXFYYowo</string>
+    <string name="google_storage_bucket" translatable="false">sedonor-2023.appspot.com</string>
+    <string name="project_id" translatable="false">sedonor-2023</string>
+    <style name="Base.Theme.SEDONOR" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.SEDONOR" parent="Base.Theme.SEDONOR"/>
+</resources>

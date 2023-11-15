@@ -1,0 +1,146 @@
+[
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/xml_backup_rules.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_lengkapi_data2.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_lengkapi_data2.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/drawable_progress_bar6.png.flat",
+        "source": "com.example.sedonor.app-main-38:/drawable/progress_bar6.png"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/drawable_progress_bar3.png.flat",
+        "source": "com.example.sedonor.app-main-38:/drawable/progress_bar3.png"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_lengkapi_data6.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_lengkapi_data6.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_lengkapi_data9.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_lengkapi_data9.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_lengkapi_data4.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_lengkapi_data4.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_home_page.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_home_page.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_main.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/drawable_progress_bar.png.flat",
+        "source": "com.example.sedonor.app-main-38:/drawable/progress_bar.png"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/drawable_progress_bar7.png.flat",
+        "source": "com.example.sedonor.app-main-38:/drawable/progress_bar7.png"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_lengkapi_data3.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_lengkapi_data3.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/drawable_progress_bar5.png.flat",
+        "source": "com.example.sedonor.app-main-38:/drawable/progress_bar5.png"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/drawable_ic_back.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_lengkapi_data1.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_lengkapi_data1.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_lengkapi_data8.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_lengkapi_data8.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_lengkapi_data7.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_lengkapi_data7.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_register.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/drawable_progress_bar2.png.flat",
+        "source": "com.example.sedonor.app-main-38:/drawable/progress_bar2.png"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/layout_activity_lengkapi_data5.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/layout/activity_lengkapi_data5.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/drawable_border_dropdown.xml.flat",
+        "source": "com.example.sedonor.app-main-38:/drawable/border_dropdown.xml"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.sedonor.app-merged_res-36:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.sedonor.app-main-38:/mipmap-xxhdpi/ic_launcher_round.webp"
+    }
+]
