@@ -43,9 +43,6 @@ class CheckIn1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_in1)
 
-//        val db = FirebaseFirestore.getInstance()
-//        val scannedValue = intent.getStringExtra("scannedValue")
-
         cameraSelector = CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK).build()
         cameraProviderFuture = ProcessCameraProvider.getInstance(this)
         previewView = findViewById<PreviewView>(R.id.previewView)
@@ -103,12 +100,7 @@ class CheckIn1 : AppCompatActivity() {
                         if (onScan != null) {
                             onScan?.invoke(barcodes)
                             onScan = null
-//                            finish()
-
-    //                        val intent = Intent(this, CheckinDetail::class.java)
-    //                        intent.putExtra("scannedValue", scannedValue)
                             getDataQr(scannedValue)
-//                            startActivity(intent)
                         }
                     }, 200)
                 }
