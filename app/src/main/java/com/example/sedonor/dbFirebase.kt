@@ -92,4 +92,15 @@ class dbFirebase(private val context: Context){
             }
             .addOnFailureListener { e -> Log.w(TAG, "Error update document", e) }
     }
+
+//    fun getData(judul: String, uID: String){
+//        val db = firestore.collection(judul).document(uID)
+//        db.get()
+//            .addOnSuccessListener { result ->
+//
+//            }
+//            .addOnFailureListener { exception ->
+//                Log.w(TAG, "Error getting documents.", exception)
+//            }
+//    }
 }

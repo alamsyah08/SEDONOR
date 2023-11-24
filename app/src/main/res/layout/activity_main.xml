@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:paddingLeft="24dp"
     android:paddingRight="24dp"
+    android:backgroundTint="@color/white"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,6 +18,7 @@
         android:text="Masuk"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -29,6 +32,7 @@
         android:layout_height="wrap_content"
         android:text="Mulai hidup sehat berdonor!"
         android:textSize="14sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -42,6 +46,9 @@
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeWidth="1.5dp"
+        app:boxStrokeColor="@color/black"
+        android:textColorHint="#80000000"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -51,7 +58,7 @@
             android:layout_height="wrap_content"
             android:hint="Masukkan email"
             android:inputType="text|textEmailAddress"
-            android:textColor="#CC000000" />
+            android:textColor="#000000"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -64,8 +71,11 @@
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeWidth="1.5dp"
+        app:boxStrokeColor="@color/black"
+        android:textColorHint="#80000000"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/inputNama">
+        app:layout_constraintTop_toBottomOf="@+id/inputNama" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputPass"
@@ -73,7 +83,7 @@
             android:layout_height="wrap_content"
             android:hint="Masukkan password"
             android:inputType="text|textPassword"
-            android:textColor="#000000" />
+            android:textColor="#000000"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -97,6 +107,7 @@
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="normal|bold"
+        android:textColor="@color/white"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,6 +120,7 @@
         android:layout_marginTop="30dp"
         android:text="Belum punya akun?"
         android:textSize="16dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.351"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,6 +143,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ingat saya"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/inputKonfPass"
         app:layout_constraintTop_toBottomOf="@+id/pesanSalah" />
 

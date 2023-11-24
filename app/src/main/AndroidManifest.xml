@@ -19,6 +19,12 @@
         android:theme="@style/Theme.SEDONOR"
         tools:targetApi="31">
         <activity
+            android:name=".RiwayatDonorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReminderActivity"
+            android:exported="false" />
+        <activity
             android:name=".CheckinBerhasil"
             android:exported="false" />
         <activity
