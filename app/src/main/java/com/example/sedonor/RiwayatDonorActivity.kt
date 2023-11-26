@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
@@ -15,9 +16,11 @@ import java.util.Collections
 class RiwayatDonorActivity : AppCompatActivity() {
     private lateinit var myAdapter: MyAdapter
     private lateinit var recyclerView: RecyclerView
+    private lateinit var tvTotal: TextView
 
     private lateinit var sessionManager: SessionManager
     lateinit var retrievedUserId : String
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +31,8 @@ class RiwayatDonorActivity : AppCompatActivity() {
         retrievedUserId = sessionManager.getUserId().toString()
 
         recyclerView = findViewById(R.id.rvArtikel)
+        tvTotal =  findViewById(R.id.tvTotal)
+
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         // Mengambil data dari Firestore
@@ -37,6 +42,9 @@ class RiwayatDonorActivity : AppCompatActivity() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val document = task.result.documents
+                    val total = document.size.toString()
+                    tvTotal.text = "Total Donor: $total"
+
                     // Konversi data Firestore ke list Artikel
                     val riwayatList = convertQuerySnapshotToList(task.result)
 
@@ -50,12 +58,16 @@ class RiwayatDonorActivity : AppCompatActivity() {
                             val clickedArtikel = riwayatList[position]
 
                             // Persiapkan intent untuk perpindahan halaman
-                            val intent = Intent(this@RiwayatDonorActivity, HomePage::class.java)
-//                            intent.putExtra("judul", clickedArtikel.judul)
-//                            intent.putExtra("konten", clickedArtikel.konten)
-//                            intent.putExtra("imageUrl", clickedArtikel.imageUrl)
+                            val intent = Intent(this@RiwayatDonorActivity, DetailRiwayatDonorActivity::class.java)
+                            intent.putExtra("judul", clickedArtikel.tempatDonor)
+                            intent.putExtra("tanggal", clickedArtikel.tanggalDonor)
+                            intent.putExtra("KH", clickedArtikel.kadarHemoglobin)
+                            intent.putExtra("ST", clickedArtikel.suhuTubuh)
+                            intent.putExtra("TDD", clickedArtikel.tekananDarahDiastolik)
+                            intent.putExtra("TDS", clickedArtikel.tekananDarahSistolik)
+                            intent.putExtra("DN", clickedArtikel.denyutNadi)
+                            intent.putExtra("BB", clickedArtikel.beratBadan)
 
-//                            Log.w("imageUrl", clickedArtikel.imageUrl)
                             // Mulai aktivitas DetailArtikel
                             startActivity(intent)
                         }
@@ -75,7 +87,7 @@ class RiwayatDonorActivity : AppCompatActivity() {
         querySnapshot?.forEach { document: QueryDocumentSnapshot ->
             // Retrieve data from Firestore document
             val beratBadan = document.getString("beratBadan")
-            val denyutNadi = document.getString("beratBadan")
+            val denyutNadi = document.getString("denyutNadi")
             val kadarHemoglobin = document.getString("kadarHemoglobin")
             val status = document.getBoolean("status")
             val suhuTubuh = document.getString("suhuTubuh")
