@@ -40,7 +40,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:backgroundTint="#EB2A6D"
-        android:onClick="keLengkapiData"
+        android:onClick="back"
         android:text="Kembali"
         android:textAlignment="center"
         android:textSize="18sp"

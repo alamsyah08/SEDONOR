@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
@@ -14,13 +16,16 @@ import com.google.firebase.firestore.QuerySnapshot
 import java.util.Collections
 
 class RiwayatDonorActivity : AppCompatActivity() {
-    private lateinit var myAdapter: MyAdapter
+    private lateinit var myAdapter: MyAdapterRiwayat
     private lateinit var recyclerView: RecyclerView
     private lateinit var tvTotal: TextView
+    private lateinit var tvLevel: TextView
+    private lateinit var imgLevel: ImageView
 
     private lateinit var sessionManager: SessionManager
     lateinit var retrievedUserId : String
 
+    private lateinit var totalDonor: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +37,8 @@ class RiwayatDonorActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.rvArtikel)
         tvTotal =  findViewById(R.id.tvTotal)
+        tvLevel =  findViewById(R.id.tvLevel)
+        imgLevel = findViewById(R.id.imgLevel)
 
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
@@ -44,15 +51,34 @@ class RiwayatDonorActivity : AppCompatActivity() {
                     val document = task.result.documents
                     val total = document.size.toString()
                     tvTotal.text = "Total Donor: $total"
+                    totalDonor = total
+
+                    if(total.toInt() > 25){
+                        val newBackgroundImage = ContextCompat.getDrawable(this, R.drawable.bg_platinum)
+                        imgLevel.setImageDrawable(newBackgroundImage)
+                        tvLevel.text = "Platinum"
+                    }else if(total.toInt() > 10){
+                        val newBackgroundImage = ContextCompat.getDrawable(this, R.drawable.bg_emas)
+                        imgLevel.setImageDrawable(newBackgroundImage)
+                        tvLevel.text = "Emas"
+                    }else if(total.toInt() > 5){
+                        val newBackgroundImage = ContextCompat.getDrawable(this, R.drawable.bg_silver)
+                        imgLevel.setImageDrawable(newBackgroundImage)
+                        tvLevel.text = "Perak"
+                    }else if(total.toInt() >  1){
+                        val newBackgroundImage = ContextCompat.getDrawable(this, R.drawable.bg_perunggu)
+                        imgLevel.setImageDrawable(newBackgroundImage)
+                        tvLevel.text = "Perunggu"
+                    }
 
                     // Konversi data Firestore ke list Artikel
                     val riwayatList = convertQuerySnapshotToList(task.result)
 
                     // Inisialisasi dan atur adapter
-                    myAdapter = MyAdapter(this, riwayatList as ArrayList<RiwayatDonor>)
+                    myAdapter = MyAdapterRiwayat(this, riwayatList as ArrayList<RiwayatDonor>)
 
                     // Set listener untuk perpindahan halaman
-                    myAdapter.setOnItemClickListener(object : MyAdapter.OnItemClickListener {
+                    myAdapter.setOnItemClickListener(object : MyAdapterRiwayat.OnItemClickListener {
                         override fun onItemClick(position: Int) {
                             // Dapatkan data artikel pada posisi yang diklik
                             val clickedArtikel = riwayatList[position]
@@ -102,6 +128,12 @@ class RiwayatDonorActivity : AppCompatActivity() {
         }
         Log.w("data",riwayatList.toString())
         return riwayatList
+    }
+
+    fun intentKePoin(view: View){
+        val intent = Intent(this, PoinDonorActivity::class.java)
+        intent.putExtra("JMLHDONOR", totalDonor)
+        startActivity(intent)
     }
 
     fun intentKeHome (view: View) {

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapter(var context: Context, var list: ArrayList<RiwayatDonor>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapterRiwayat(var context: Context, var list: ArrayList<RiwayatDonor>) : RecyclerView.Adapter<MyAdapterRiwayat.MyViewHolder>() {
     private var mListener: OnItemClickListener? = null
 
     interface OnItemClickListener {

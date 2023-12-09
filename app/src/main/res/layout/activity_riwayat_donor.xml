@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Riwayat Donorku"
-            android:textSize="25sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/ibBackArtikel"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,16 +46,43 @@
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:onClick="intentKePoin"
             app:cardCornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ibBackArtikel">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imgLevel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:srcCompat="@drawable/bg_riwayat" />
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/bg_silver" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-6dp"
+                    android:text="Kamu berada di level"
+                    android:textColor="#38246F" />
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="None"
+                    android:textColor="#38246F"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -78,7 +105,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="20dp"
-            android:background="#F2F2F2"
+            android:background="#D6D6D6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTotal" />

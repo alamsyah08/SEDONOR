@@ -141,4 +141,9 @@ class CheckIn1 : AppCompatActivity() {
         return documentSnapshot.toObject(LokasiDonor::class.java)
     }
 
+    fun back(view: View){
+        val intent = Intent(this, HomePage::class.java)
+        startActivity(intent)
+    }
+
 }

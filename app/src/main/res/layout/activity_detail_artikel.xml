@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    tools:context=".DetailArtikel" >
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailArtikel">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ibBackArtikel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginStart="2dp"
+            android:clickable="true"
+            android:onClick="intentKeListArtikel"
+            app:backgroundTint="#FFFFFF"
+            app:elevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_pink"/>
+
+        <TextView
+            android:id="@+id/tvJudulDetailArtikel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Artikel Kesehatan"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ibBackArtikel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivDetailArtikel"
+            android:layout_width="500dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvKontenDetailArtikel"
+            app:layout_constraintCircleAngle="100"
+            app:layout_constraintCircleRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvJudulDetailArtikel"
+            app:layout_constraintVertical_bias="0.092"
+            tools:src="@drawable/test" />
+
+        <TextView
+            android:id="@+id/tvTitleDetailArtikel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:justificationMode="inter_word"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintTop_toBottomOf="@id/ivDetailArtikel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Judul"
+            />
+
+        <TextView
+            android:id="@+id/tvKontenDetailArtikel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+            android:justificationMode="inter_word"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleDetailArtikel"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Et netus et malesuada fames ac turpis egestas integer eget. Eu tincidunt tortor aliquam nulla. Mattis nunc sed blandit libero volutpat sed cras ornare arcu. Ac tortor dignissim convallis aenean et tortor. Eros donec ac odio tempor orci dapibus ultrices in. Rhoncus dolor purus non enim praesent elementum facilisis leo. Cursus eget nunc scelerisque viverra mauris in. Leo vel orci porta non pulvinar neque. Diam maecenas sed enim ut sem. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. Tincidunt nunc pulvinar sapien et ligula ullamcorper. Mattis molestie a iaculis at erat pellentesque adipiscing commodo elit. Lacinia at quis risus sed. Cras ornare arcu dui vivamus arcu felis bibendum. Mollis aliquam ut porttitor leo a diam sollicitudin.
+Sed nisi lacus sed viverra tellus in hac. Vitae tortor condimentum lacinia quis. Augue ut lectus arcu bibendum at varius vel pharetra. Curabitur vitae nunc sed velit dignissim sodales ut. Urna nunc id cursus metus aliquam. Nulla facilisi nullam vehicula ipsum a. Nec ullamcorper sit amet risus nullam. Ac orci phasellus egestas tellus rutrum tellus pellentesque. Consequat id porta nibh venenatis cras sed felis eget. Platea dictumst quisque sagittis purus sit. Purus in mollis nunc sed id semper risus. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Velit euismod in pellentesque massa placerat.
+
+Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Cursus eget nunc scelerisque viverra mauris. Lectus sit amet est placerat. Odio euismod lacinia at quis risus. Leo urna molestie at elementum eu facilisis sed odio. Volutpat lacus laoreet non curabitur gravida. Sed libero enim sed faucibus turpis in eu mi. Sapien et ligula ullamcorper malesuada proin libero nunc. Et malesuada fames ac turpis egestas sed tempus. In iaculis nunc sed augue lacus viverra vitae congue. Justo laoreet sit amet cursus. Amet commodo nulla facilisi nullam vehicula. Ac felis donec et odio pellentesque diam volutpat. Tempor id eu nisl nunc mi ipsum faucibus.
+
+Tellus mauris a diam maecenas sed enim ut sem viverra. In vitae turpis massa sed elementum tempus egestas sed sed. Dictum fusce ut placerat orci nulla pellentesque dignissim. Duis at consectetur lorem donec massa sapien faucibus et. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Ut sem viverra aliquet eget. Sed elementum tempus egestas sed sed risus pretium. Gravida neque convallis a cras semper auctor neque. Ornare aenean euismod elementum nisi quis eleifend. Egestas integer eget aliquet nibh praesent tristique. Pretium viverra suspendisse potenti nullam ac tortor vitae purus. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Scelerisque varius morbi enim nunc faucibus a pellentesque. Mauris a diam maecenas sed enim ut sem viverra. At tempor commodo ullamcorper a lacus vestibulum sed. Purus viverra accumsan in nisl nisi scelerisque eu ultrices. Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Vitae nunc sed velit dignissim sodales ut eu sem. Massa enim nec dui nunc. Donec enim diam vulputate ut pharetra sit amet aliquam id.
+
+Tempor commodo ullamcorper a lacus vestibulum sed. Lectus sit amet est placerat in. Libero id faucibus nisl tincidunt eget nullam. Consequat id porta nibh venenatis cras sed. Duis at tellus at urna condimentum mattis pellentesque. Sed enim ut sem viverra. Id faucibus nisl tincidunt eget nullam non nisi. Quam nulla porttitor massa id neque aliquam vestibulum. Pharetra et ultrices neque ornare aenean euismod elementum. Nunc mattis enim ut tellus elementum.
+
+In ornare quam viverra orci sagittis eu. Vitae justo eget magna fermentum iaculis eu. Scelerisque eleifend donec pretium vulputate. Amet nisl purus in mollis nunc sed. Non odio euismod lacinia at. Faucibus nisl tincidunt eget nullam non nisi. Adipiscing commodo elit at imperdiet dui accumsan. Lectus urna duis convallis convallis tellus. Pulvinar sapien et ligula ullamcorper malesuada. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Diam donec adipiscing tristique risus nec feugiat in fermentum posuere. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Ut tellus elementum sagittis vitae et leo duis. Libero nunc consequat interdum varius. Nulla facilisi etiam dignissim diam quis. Nunc scelerisque viverra mauris in. Cursus mattis molestie a iaculis at erat pellentesque.
+
+Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Vitae nunc sed velit dignissim sodales ut. Vel facilisis volutpat est velit egestas dui. Nisi vitae suscipit tellus mauris a diam maecenas sed. Elementum nibh tellus molestie nunc non blandit massa enim. Et netus et malesuada fames ac turpis egestas integer. Ullamcorper eget nulla facilisi etiam dignissim. Pretium nibh ipsum consequat nisl vel pretium lectus quam id. Morbi tincidunt ornare massa eget egestas purus viverra accumsan. Et tortor consequat id porta nibh venenatis. Convallis tellus id interdum velit laoreet. Eu tincidunt tortor aliquam nulla. Congue mauris rhoncus aenean vel elit. Nec tincidunt praesent semper feugiat. Nibh sit amet commodo nulla facilisi. Eros in cursus turpis massa tincidunt dui ut." />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:labelVisibilityMode="labeled"
+        android:background="@android:color/white"
+        app:menu="@menu/navbar_menu"
+
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

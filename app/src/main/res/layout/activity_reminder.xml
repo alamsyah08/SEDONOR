@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imgLevel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/backgroundreminderr" />
@@ -84,7 +84,7 @@
 
             <TextView
                 android:id="@+id/tvSisaHari"
-                android:layout_width="76dp"
+                android:layout_width="86dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:text="0"
@@ -161,57 +161,57 @@
         app:layout_constraintTop_toBottomOf="@+id/rectangle_4" />
 
 
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17">
 
-        <LinearLayout
+        <CheckBox
+            android:id="@+id/checkbox1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView17">
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/checkbox_border"
+            android:onClick="btn"
+            android:text="Tidur cukup 8 jam"
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
-            <CheckBox
-                android:id="@+id/checkbox1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/checkbox_border"
-                android:layout_marginBottom="10dp"
-                android:text="Tidur cukup 8 jam"
-                android:textSize="16sp"
-                android:textStyle="normal"/>
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/checkbox_border"
+            android:text="Minum air putih 2 liter sehari"
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
-            <CheckBox
-                android:id="@+id/checkbox2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/checkbox_border"
-                android:layout_marginBottom="10dp"
-                android:text="Minum air putih 2 liter sehari"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+        <CheckBox
+            android:id="@+id/checkbox3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/checkbox_border"
+            android:text="Menghindari makanan berlemak"
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
-            <CheckBox
-                android:id="@+id/checkbox3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/checkbox_border"
-                android:layout_marginBottom="10dp"
-                android:text="Menghindari makanan berlemak"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+        <CheckBox
+            android:id="@+id/checkbox4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checkbox_border"
+            android:text="Olahraga ringan"
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
-            <CheckBox
-                android:id="@+id/checkbox4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/checkbox_border"
-                android:text="Olahraga ringan"
-                android:textSize="16sp"
-                android:textStyle="normal" />
-
-        </LinearLayout>
-
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

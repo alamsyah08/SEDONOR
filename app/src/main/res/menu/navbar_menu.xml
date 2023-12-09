@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_item_1"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+      />
+
+    <item
+        android:id="@+id/menu_item_2"
+        android:title="Tanya PMI"
+        android:icon="@drawable/ic_tanyapmi"
+        />
+
+    <item
+        android:id="@+id/menu_item_3"
+        android:title="Account"
+        android:icon="@drawable/ic_akun"
+        />
+</menu>

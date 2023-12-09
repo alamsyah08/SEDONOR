@@ -60,7 +60,8 @@ class dbFirebase(private val context: Context){
                         "goldar" to null,
                         "riwayatPenyakit" to null,
                         "kodeDonor" to 0,
-                        "status" to false
+                        "status" to false,
+                        "checkin" to "01-01-2001"
                     )
 
                     saveData(userId, userData)
