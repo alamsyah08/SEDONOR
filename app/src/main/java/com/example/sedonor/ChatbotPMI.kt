@@ -114,7 +114,7 @@ class ChatbotPMI : AppCompatActivity() {
 
         val openAiApi = retrofit.create(OpenAiApi::class.java)
 
-        val apiKey = "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"  // Replace with your actual API KEY
+        val apiKey = ""  // Replace with your actual API KEY
         val authorizationHeader = "Bearer $apiKey"
 
         val request = OpenAiRequest(
