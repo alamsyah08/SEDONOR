@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
+import com.example.sedonor.artikel.Artikel;
+
 public class AdapaterHome extends RecyclerView.Adapter<AdapaterHome.MyViewHolder> {
     Context context;
     ArrayList<Artikel> list;

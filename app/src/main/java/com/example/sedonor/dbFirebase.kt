@@ -4,8 +4,8 @@ import android.content.ContentValues.TAG
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
+import com.example.sedonor.register.LengkapiData1
 import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
 import com.google.android.gms.tasks.TaskExecutors
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth

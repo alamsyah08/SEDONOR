@@ -22,31 +22,34 @@
         android:theme="@style/Theme.SEDONOR"
         tools:targetApi="31">
         <activity
-            android:name=".PoinDonorActivity"
+            android:name=".KalenderActivity"
             android:exported="false" />
         <activity
-            android:name=".CalenderActivity"
+            android:name=".riwayat.PoinDonorActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailLokasiActivity"
+            android:name=".calenderview.CalenderActivity"
             android:exported="false" />
         <activity
-            android:name=".LokasiDonorActivity"
+            android:name=".lokasi.DetailLokasiActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailRiwayatDonorActivity"
+            android:name=".lokasi.LokasiDonorActivity"
             android:exported="false" />
         <activity
-            android:name=".RiwayatDonorActivity"
+            android:name=".riwayat.DetailRiwayatDonorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".riwayat.RiwayatDonorActivity"
             android:exported="false" />
         <activity
             android:name=".ReminderActivity"
             android:exported="false" />
         <activity
-            android:name=".CheckinBerhasil"
+            android:name=".scanner.CheckinBerhasil"
             android:exported="false" />
         <activity
-            android:name=".CheckinDetail"
+            android:name=".scanner.CheckinDetail"
             android:exported="false" />
 
         <meta-data
@@ -54,52 +57,52 @@
             android:value="barcode" />
 
         <activity
-            android:name=".CheckIn1"
+            android:name=".scanner.CheckIn1"
             android:exported="false" />
         <activity
-            android:name=".LengkapiData9"
+            android:name=".register.LengkapiData9"
             android:exported="false" />
         <activity
-            android:name=".LengkapiData4"
+            android:name=".register.LengkapiData4"
             android:exported="false" />
         <activity
             android:name=".HomePage"
             android:exported="false" />
         <activity
-            android:name=".LengkapiData8"
+            android:name=".register.LengkapiData8"
             android:exported="false" />
         <activity
-            android:name=".LengkapiData7"
+            android:name=".register.LengkapiData7"
             android:exported="false" />
         <activity
-            android:name=".LengkapiData6"
+            android:name=".register.LengkapiData6"
             android:exported="false" />
         <activity
-            android:name=".LengkapiData5"
+            android:name=".register.LengkapiData5"
             android:exported="false" />
         <activity
-            android:name=".LengkapiData3"
+            android:name=".register.LengkapiData3"
             android:exported="false" />
         <activity
-            android:name=".LengkapiData2"
+            android:name=".register.LengkapiData2"
             android:exported="false" />
         <activity
-            android:name=".LengkapiData1"
+            android:name=".register.LengkapiData1"
             android:exported="false" />
         <activity
-            android:name=".Register"
+            android:name=".register.Register"
             android:exported="false" />
         <activity
-            android:name=".ArtikelPage"
+            android:name=".artikel.ArtikelPage"
             android:exported="false" />
         <activity
             android:name=".ChatbotPMI"
             android:exported="false" />
         <activity
-            android:name=".DetailArtikel"
+            android:name=".artikel.DetailArtikel"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".login.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

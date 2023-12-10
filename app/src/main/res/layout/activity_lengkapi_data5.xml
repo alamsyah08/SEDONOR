@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="24dp"
     android:paddingRight="24dp"
-    tools:context=".LengkapiData5">
+    tools:context=".register.LengkapiData5">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputBerat"

@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.sedonor.lokasi.LokasiDonor
 
 class AdapterLokasiHome(var context: Context, var list: ArrayList<LokasiDonor>) : RecyclerView.Adapter<AdapterLokasiHome.MyViewHolder>() {
     private var mListener: OnItemClickListener? = null

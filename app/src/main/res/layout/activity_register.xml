@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="24dp"
     android:paddingRight="24dp"
-    tools:context=".Register">
+    tools:context=".register.Register">
 
     <TextView
         android:id="@+id/textView2"

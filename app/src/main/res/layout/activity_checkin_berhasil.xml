@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="24dp"
     android:paddingRight="24dp"
-    tools:context=".CheckinBerhasil">
+    tools:context=".scanner.CheckinBerhasil">
 
     <TextView
         android:id="@+id/tv"

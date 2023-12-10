@@ -8,26 +8,31 @@ import android.os.Looper
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.SnapHelper
+import com.example.sedonor.artikel.Artikel
+import com.example.sedonor.artikel.ArtikelPage
+import com.example.sedonor.artikel.DetailArtikel
+import com.example.sedonor.lokasi.DetailLokasiActivity
+import com.example.sedonor.lokasi.LokasiDonor
+import com.example.sedonor.lokasi.LokasiDonorActivity
+import com.example.sedonor.riwayat.RiwayatDonorActivity
+import com.example.sedonor.scanner.CheckIn1
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QueryDocumentSnapshot
 import com.google.firebase.firestore.QuerySnapshot
-import java.security.Timestamp
-import java.text.DateFormat
 import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.Period
-import java.time.format.DateTimeFormatter
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
-import kotlin.concurrent.timer
 
 
 class HomePage : AppCompatActivity() {
@@ -44,6 +49,18 @@ class HomePage : AppCompatActivity() {
     private lateinit var recyclerViewHome: RecyclerView
     private lateinit var rvLokasi: RecyclerView
     private lateinit var myAdapterLokasi: AdapterLokasiHome
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var tvDateMonth: TextView
+    private lateinit var ivCalendarNext: ImageView
+    private lateinit var ivCalendarPrevious: ImageView
+
+    private val sdf = SimpleDateFormat("MMMM yyyy", Locale.ENGLISH)
+    private val cal = Calendar.getInstance(Locale.ENGLISH)
+    private val currentDate = Calendar.getInstance(Locale.ENGLISH)
+    private val dates = ArrayList<Date>()
+    private lateinit var adapter: CalendarAdapter
+    private val calendarList2 = ArrayList<CalendarDateModel>()
 
     private val requestPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
         if(isGranted){
@@ -67,9 +84,6 @@ class HomePage : AppCompatActivity() {
                 tvDate.text = "0 hari menuju donor berikutnya!"
             }
         }
-
-        //Zahwa
-//        val db = FirebaseFirestore.getInstance()
 
         bottomNavigationView = findViewById(R.id.bottom_navbar)
         setupBottomNavigationBar()
@@ -107,7 +121,7 @@ class HomePage : AppCompatActivity() {
                     })
                     recyclerViewHome.adapter = adapterHome
                 } else {
-                    // Handle kegagalan
+                    // Handle error
                     Log.e("Firestore", "Error getting documents.", task.exception)
                 }
             }
@@ -147,10 +161,18 @@ class HomePage : AppCompatActivity() {
                     // Set adapter ke RecyclerView
                     rvLokasi.adapter = myAdapterLokasi
                 } else {
-                    // Handle kegagalan
+                    // Handle error
                     Log.e("Firestore", "Error getting documents.", task.exception)
                 }
             }
+
+        tvDateMonth = findViewById(R.id.text_date_month)
+        recyclerView = findViewById(R.id.recyclerViewKalender)
+        ivCalendarNext = findViewById(R.id.iv_calendar_next)
+        ivCalendarPrevious = findViewById(R.id.iv_calendar_previous)
+        setUpAdapter()
+        setUpClickListener()
+        setUpCalendar()
 
     }
 
@@ -262,7 +284,8 @@ class HomePage : AppCompatActivity() {
             val judul = document.getString("judul")
             val konten = document.getString("konten")
             val imageUrl = document.getString("gambar")
-            val artikel = Artikel(judul, konten, imageUrl)
+            val artikel =
+                Artikel(judul, konten, imageUrl)
             artikelList.add(artikel)
         }
         return artikelList
@@ -282,6 +305,60 @@ class HomePage : AppCompatActivity() {
         }
         Log.w("data",riwayatList.toString())
         return riwayatList
+    }
+
+    /**
+     * Set up click listener
+     */
+
+    private fun setUpClickListener() {
+        ivCalendarNext.setOnClickListener {
+            cal.add(Calendar.MONTH, 1)
+            setUpCalendar()
+        }
+        ivCalendarPrevious.setOnClickListener {
+            cal.add(Calendar.MONTH, -1)
+            if (cal == currentDate)
+                setUpCalendar()
+            else
+                setUpCalendar()
+        }
+    }
+
+
+    /**
+     * Setting up adapter for recyclerview
+     */
+    private fun setUpAdapter() {
+        val snapHelper: SnapHelper = LinearSnapHelper()
+        snapHelper.attachToRecyclerView(recyclerView)
+        adapter = CalendarAdapter { calendarDateModel: CalendarDateModel, position: Int ->
+            calendarList2.forEachIndexed { index, calendarModel ->
+                calendarModel.isSelected = index == position
+            }
+            adapter.setData(calendarList2)
+        }
+        recyclerView.adapter = adapter
+    }
+
+    /**
+     * Function to setup calendar for every month
+     */
+    private fun setUpCalendar() {
+        val calendarList = ArrayList<CalendarDateModel>()
+        tvDateMonth.text = sdf.format(cal.time)
+        val monthCalendar = cal.clone() as Calendar
+        val maxDaysInMonth = cal.getActualMaximum(Calendar.DAY_OF_MONTH)
+        dates.clear()
+        monthCalendar.set(Calendar.DAY_OF_MONTH, 1)
+        while (dates.size < maxDaysInMonth) {
+            dates.add(monthCalendar.time)
+            calendarList.add(CalendarDateModel(monthCalendar.time))
+            monthCalendar.add(Calendar.DAY_OF_MONTH, 1)
+        }
+        calendarList2.clear()
+        calendarList2.addAll(calendarList)
+        adapter.setData(calendarList)
     }
 
     private fun showToastAndNavigate(message: String, destination: Class<*>) {
@@ -320,7 +397,10 @@ class HomePage : AppCompatActivity() {
     }
 
     fun btnCal(view: View){
-        val intent = Intent(this, CalenderActivity::class.java)
-        startActivity(intent)
+        hitungSisaWaktu { sisaWaktu ->
+            val intent = Intent(this, KalenderActivity::class.java)
+            intent.putExtra("SISAWAKTU", sisaWaktu.toString())
+            startActivity(intent)
+        }
     }
 }

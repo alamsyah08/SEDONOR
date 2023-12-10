@@ -4,4 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparentHalfBlack">#80000000</color>
     <color name="transparentHalfWhite">#80FFFFFF</color>
+    <color name="grey">#666666</color>
+    <color name="lightGrey">#A2A2A2</color>
+    <color name="veryLightGrey">#CECECE</color>
+    <color name="purple">#EB2A6D</color>
 </resources>

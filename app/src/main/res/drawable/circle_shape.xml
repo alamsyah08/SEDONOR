@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Tidak ada warna latar belakang -->
+    <solid android:color="@android:color/black" />
+
+    <!-- Tidak ada border -->
+    <stroke android:width="0dp" />
+
+    <!-- Untuk memberi radius agar bentuk menjadi lingkaran -->
+    <corners android:radius="50dp" />
+
+</shape>
